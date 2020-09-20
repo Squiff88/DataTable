@@ -1,0 +1,84 @@
+{
+    "matches": {
+        "21893509": {
+            "_doc": "match",
+            "_id": 21893509,
+            "_sid": 1,
+            "_rcid": 2123,
+            "_tid": 93581,
+            "_utid": 32383,
+            "time": {
+                "_doc": "time",
+                "time": "22:15",
+                "date": "03\/03\/20",
+                "tz": "UTC",
+                "tzoffset": 0,
+                "uts": 1583273700
+            },
+            "round": 1,
+            "roundname": {
+                "_doc": "tableround",
+                "_id": 1,
+                "name": 1
+            },
+            "week": "10",
+            "result": {
+                "home": 1,
+                "away": 2,
+                "period": "nt",
+                "winner": "away"
+            },
+            "periods": {
+                "p1": {
+                    "home": 1,
+                    "away": 0
+                },
+                "ft": {
+                    "home": 1,
+                    "away": 2
+                }
+            },
+            "_seasonid": 76925,
+            "teams": {
+                "home": {
+                    "_doc": "team",
+                    "_id": 14486363,
+                    "_sid": 1,
+                    "uid": 702473,
+                    "virtual": false,
+                    "name": "Defensa Justicia SRL",
+                    "mediumname": "Defensa Justicia SRL",
+                    "abbr": "DEF",
+                    "nickname": null,
+                    "iscountry": false,
+                    "haslogo": false
+                },
+                "away": {
+                    "_doc": "team",
+                    "_id": 14486373,
+                    "_sid": 1,
+                    "uid": 702483,
+                    "virtual": false,
+                    "name": "Santos SRL",
+                    "mediumname": "Santos SRL",
+                    "abbr": "SAN",
+                    "nickname": null,
+                    "iscountry": false,
+                    "haslogo": false
+                }
+            },
+            "neutralground": false,
+            "comment": null,
+            "status": null,
+            "tobeannounced": false,
+            "postponed": false,
+            "canceled": false,
+            "inlivescore": true,
+            "stadiumid": 0,
+            "bestof": null,
+            "walkover": false,
+            "retired": false,
+            "disqualified": false
+        }
+    }
+}

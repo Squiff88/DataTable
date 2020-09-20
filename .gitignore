@@ -1,0 +1,3 @@
+node_modules
+# Usually would keep it outside of the repo
+dbPass.txt
