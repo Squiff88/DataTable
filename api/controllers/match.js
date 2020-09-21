@@ -33,7 +33,7 @@ const getMatchByWeek = asyncHandler(async (req, res, next) => {
   return res.status(200).json({
     success: true,
     count: getAllMatches.length,
-    message: "All match events",
+    message: "All match events for the given week",
     data: getAllMatches,
   });
 });
