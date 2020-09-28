@@ -1,0 +1,27 @@
+$backgroundBlue: #00003f;
+$backgroundWhite: whitesmoke;
+$borderColor: lightgray;
+
+$mainFontSize: 14px;
+
+$breakpointS: 576px;
+$breakpointM: 772px;
+$breakpointL: 992px;
+
+@mixin mobileL {
+  @media (max-width: #{$breakpointS}) {
+    @content;
+  }
+}
+
+@mixin tabletS {
+  @media (max-width: #{$breakpointM}) {
+    @content;
+  }
+}
+
+@mixin tabletL {
+  @media (max-width: #{$breakpointM}) {
+    @content;
+  }
+}

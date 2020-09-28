@@ -1,6 +1,7 @@
 import React from "react";
-import axios from "axios";
 import Table from "../../components/Table/Table";
+import { fetchResource } from "../../helpers/fetchResource";
+import TableContainerSkeleton from "./TableContainerSkeleton";
 
 const TableContainer = () => {
   const [apiState, setApiState] = React.useState({
@@ -10,13 +11,14 @@ const TableContainer = () => {
 
   const [data, setData] = React.useState(null);
 
-  React.useEffect(() => {
+  const fetchMatchDataHandler = React.useCallback((method, url) => {
     setApiState({
       loading: true,
       error: apiState.error,
     });
-    axios
-      .get("/api/v1/match/11")
+    // Should be dynamic for pagination
+
+    fetchResource(method, url)
       .then((res) => {
         if (res && res.status === 200) {
           setData(res.data.data);
@@ -34,22 +36,22 @@ const TableContainer = () => {
           error: err,
         })
       );
+  });
+
+  React.useEffect(() => {
+    fetchMatchDataHandler("GET", "/api/v1/match/11");
   }, []);
 
   if (apiState.loading) {
-    return <div>Loading ...</div>;
+    return <TableContainerSkeleton />;
   }
 
   if (apiState.error) {
-    return <div>{apiState.error}</div>;
+    return <div>{apiState.error.message}</div>;
   }
 
   if (data) {
-    return (
-      <>
-        <Table data={data} />
-      </>
-    );
+    return <Table data={data} refetchData={fetchMatchDataHandler} />;
   }
   return <div>No Data</div>;
 };

@@ -25,12 +25,12 @@ const modelJsonData = () => {
   return schemaModel;
 };
 
-const modelData = () => {
+const modelData = (venue) => {
   const modeledData = [];
   if (parsedDataObject && parsedDataObject.doc) {
     parsedDataObject.doc.map((chunk) => {
-      if (chunk && chunk.data && chunk.data.matches) {
-        return Object.values(chunk.data.matches).map((value, i) => {
+      if (chunk && chunk.data && chunk.data[venue]) {
+        return Object.values(chunk.data[venue]).map((value, i) => {
           const func = (val) => val;
           const cleanData = deepMap(func, value);
 
@@ -44,4 +44,4 @@ const modelData = () => {
   return modeledData;
 };
 
-module.exports = { jsonData: modelJsonData(), modeledData: modelData() };
+module.exports = { jsonData: modelJsonData(), modeledData: modelData };

@@ -1,0 +1,120 @@
+@import "../../styles/theme.scss";
+
+.TableContentWrapper {
+  display: flex;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+
+  .ContentInnerWrapper {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    justify-content: space-between;
+    padding: 2px 5px;
+    border-bottom: 1px solid gray;
+    font-size: 13px;
+
+    .ContentWrapper {
+      width: 100%;
+
+      .RowWrapper {
+        display: flex;
+        flex: 1;
+        width: 100%;
+        justify-content: space-between;
+
+        .TableInnerWrapper {
+          display: flex;
+          flex: 1;
+        }
+
+        .TimeWrapper {
+          display: flex;
+          width: 50px;
+          padding: 5px 10px;
+          border-right: 1px solid gray;
+        }
+
+        .TeamsWrapper {
+          display: flex;
+          min-width: 350px;
+          justify-content: center;
+          border-right: 1px solid gray;
+          font-weight: 500;
+
+          td {
+            width: 100%;
+          }
+        }
+
+        .PeriodWrapper {
+          display: flex;
+          flex: 1;
+          justify-content: space-around;
+
+          tbody {
+            display: flex;
+            justify-content: space-around;
+            flex: 1;
+
+            .FirstPeriod {
+              display: flex;
+              flex: 1;
+              justify-content: center;
+            }
+            .EndPeriod {
+              display: flex;
+              flex: 1;
+              justify-content: center;
+            }
+          }
+          .PeriodSeparator {
+            padding: 0px 4px;
+          }
+        }
+        .DetailsWrapper {
+          display: flex;
+          flex: 1;
+
+          .ActionsWrapper {
+            display: flex;
+            justify-content: flex-end;
+            width: 130px;
+
+            button {
+              border-radius: 3px;
+              padding: 2px 5px;
+              border: 1px solid gray;
+              margin-left: 2px;
+
+              &:focus {
+                border: 1px solid $backgroundBlue;
+                outline: none;
+              }
+
+              &:hover {
+                border: 1px solid black;
+                outline: none;
+              }
+            }
+          }
+        }
+      }
+
+      .ContentLeft {
+        text-align: right;
+      }
+      .ContentRight {
+        text-align: left;
+      }
+      .ContentSeparator {
+        padding: 0px 20px;
+      }
+      .PeriodContent {
+        // max-wi
+      }
+    }
+  }
+}

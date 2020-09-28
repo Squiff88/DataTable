@@ -18,7 +18,7 @@ const deepMap = (f, obj) => {
       } else {
         let replaceValue = obj[val];
         if (obj[val] === null) {
-          replaceValue = "";
+          replaceValue = "_";
         }
         acc[replaceKey] = f(replaceValue, replaceKey);
       }

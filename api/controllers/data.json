@@ -1,0 +1,134 @@
+{
+    "_id": {
+        "$oid": "5f6add4379b29a0f5f94abf4"
+    },
+    "periods": {
+        "p1": {
+            "home": {
+                "$numberInt": "0"
+            },
+            "away": {
+                "$numberInt": "0"
+            }
+        },
+        "ft": {
+            "home": {
+                "$numberInt": "3"
+            },
+            "away": {
+                "$numberInt": "0"
+            }
+        }
+    },
+    "teams": {
+        "home": {
+            "docs": "team",
+            "mid": {
+                "$numberInt": "14486367"
+            },
+            "_sid": {
+                "$numberInt": "1"
+            },
+            "uid": {
+                "$numberInt": "702477"
+            },
+            "virtual": false,
+            "name": "Ind. Medellin SRL",
+            "mediumname": "Independiente Medellin SRL",
+            "abbr": "MED",
+            "nickname": "_",
+            "iscountry": false,
+            "haslogo": false
+        },
+        "away": {
+            "docs": "team",
+            "mid": {
+                "$numberInt": "14486361"
+            },
+            "_sid": {
+                "$numberInt": "1"
+            },
+            "uid": {
+                "$numberInt": "702471"
+            },
+            "virtual": false,
+            "name": "Caracas SRL",
+            "mediumname": "Caracas FC SRL",
+            "abbr": "CAR",
+            "nickname": "_",
+            "iscountry": false,
+            "haslogo": false
+        }
+    },
+    "docs": "match",
+    "mid": {
+        "$numberInt": "23380179"
+    },
+    "_sid": {
+        "$numberInt": "1"
+    },
+    "_rcid": {
+        "$numberInt": "2123"
+    },
+    "_tid": {
+        "$numberInt": "93581"
+    },
+    "_utid": {
+        "$numberInt": "32383"
+    },
+    "time": {
+        "docs": "time",
+        "time": "13:00",
+        "date": "16/09/20",
+        "tz": "UTC",
+        "tzoffset": {
+            "$numberInt": "0"
+        },
+        "uts": {
+            "$numberInt": "1600261200"
+        }
+    },
+    "round": {
+        "$numberInt": "1"
+    },
+    "roundname": {
+        "docs": "tableround",
+        "mid": {
+            "$numberInt": "1"
+        },
+        "name": {
+            "$numberInt": "1"
+        }
+    },
+    "week": "38",
+    "result": {
+        "home": {
+            "$numberInt": "3"
+        },
+        "away": {
+            "$numberInt": "0"
+        },
+        "period": "nt",
+        "winner": "home"
+    },
+    "_seasonid": {
+        "$numberInt": "76925"
+    },
+    "neutralground": false,
+    "comment": "",
+    "status": "_",
+    "tobeannounced": false,
+    "postponed": false,
+    "canceled": false,
+    "inlivescore": true,
+    "stadiumid": {
+        "$numberInt": "0"
+    },
+    "bestof": "_",
+    "walkover": false,
+    "retired": false,
+    "disqualified": false,
+    "__v": {
+        "$numberInt": "0"
+    }
+}

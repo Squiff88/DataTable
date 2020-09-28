@@ -1,6 +1,29 @@
+@import "../../styles/theme.scss";
+
 .TableWrapper {
-  max-width: 100%;
-  display: block;
+  position: relative;
+  max-width: 900px;
   margin: 0 auto;
-  text-align: center;
+  margin-top: 50px;
+  padding: 50px;
+  box-sizing: border-box;
+  background-color: $backgroundWhite;
+
+  @include tabletS {
+    width: 650px;
+  }
+
+  @include tabletS {
+    width: 550px;
+  }
+
+  @include mobileL {
+    width: 350px;
+  }
+
+  .TableInnerWrapper {
+    -webkit-box-shadow: -1px 4px 11px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 4px 11px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 4px 11px -5px rgba(0, 0, 0, 0.75);
+  }
 }

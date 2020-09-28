@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const { modeledData } = require("../models/modelJsonData");
 const MatchModel = require("../models/MatchModel");
 const dbConnection = require("../helpers/dbConnectionHandler");
+const TournamentModel = require("../models/TournamentModel");
 
 dotenv.config({ path: "../config.env" });
 
@@ -16,7 +17,7 @@ mongoose.connect(mongoURL, {
 });
 
 const importData = async () => {
-  await MatchModel.create(modeledData);
+  await MatchModel.create(modeledData("matches"));
 
   console.log("success !!!! 🎆🎆🎆");
   process.exit();

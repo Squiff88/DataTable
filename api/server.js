@@ -11,6 +11,26 @@ const matchRoutes = require("./routes/matchRoutes");
 // Get ENV variables
 dotenv.config({ path: "./config.env" });
 
+// Get connection URL
+const dbConnectionString = dbConnection();
+
+// Connect to DB
+mongoose.connect(
+  dbConnectionString,
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    autoIndex: true,
+  },
+  (err) => {
+    if (err) {
+      console.log(err, "err connecting to the DB");
+    } else {
+      console.log("connected to DB");
+    }
+  }
+);
+
 const app = express();
 
 /**
@@ -33,27 +53,8 @@ app.all("*", (req, res, next) => {
   });
 });
 
-// Get connection URL
-const dbConnectionString = dbConnection();
 // Set server port
 const port = process.env.PORT || 5500;
-
-// Connect to DB
-mongoose.connect(
-  dbConnectionString,
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    autoIndex: true,
-  },
-  (err) => {
-    if (err) {
-      console.log(err, "err connecting to the DB");
-    } else {
-      console.log("connected to DB");
-    }
-  }
-);
 
 const server = app.listen(port, () => console.log(`🏃🏃🏃 on port ${port}`));
 

@@ -1,0 +1,40 @@
+@import "../../styles/theme.scss";
+
+.HeaderWrapper {
+  display: flex;
+  flex: 1;
+  background-color: #00003f;
+  color: white;
+  padding: 10px 20px 10px 7px;
+
+  .Date {
+    display: flex;
+    flex-grow: 1;
+
+    font-size: $mainFontSize;
+  }
+
+  .Period {
+    display: flex;
+    width: 36px;
+    margin-right: 50px;
+    font-size: $mainFontSize;
+  }
+  .PeriodFinal {
+    display: flex;
+    width: 33px;
+    margin-right: 40px;
+    font-size: $mainFontSize;
+  }
+  .ID {
+    display: flex;
+    margin-right: 30px;
+    width: 45px;
+  }
+  .Action {
+    display: flex;
+    width: 45px;
+    padding-right: 5px;
+    margin-left: 35px;
+  }
+}
